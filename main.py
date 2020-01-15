@@ -15,6 +15,13 @@ def menu():
                         numbers.append(user_input)
                 else:
                     print('The answer is {}'.format(add(numbers)))
+            elif user_input == 2:
+                while not user_input == 0:
+                    user_input = int(input('Enter any number not zero to add on to your equation: '))
+                    if user_input != 0:
+                        numbers.append(user_input)
+                else:
+                    print('The answer is {}'.format(subtract(numbers)))
         except ValueError as ex:
             print(ex)
 
@@ -26,8 +33,11 @@ def add(all_numbers):
     return full_prob
 
 
-def subtract():
-    pass
+def subtract(all_numbers):
+    full_prob = 0
+    for z in all_numbers:
+        full_prob -= z
+    return full_prob
 
 
 def multiply():
