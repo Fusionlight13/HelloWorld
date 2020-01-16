@@ -58,6 +58,7 @@ def multiply(all_numbers):
     full_prob = 0
     for z in all_numbers:
         full_prob *= z
+	return full_prob
 
 
 def division(all_numbers):
