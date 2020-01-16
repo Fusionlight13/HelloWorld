@@ -29,6 +29,13 @@ def menu():
                         numbers.append(user_input)
 					else:
 					print('The answer is {}'.format(multiply(numbers))
+			elif user_input == :
+				while not user_input == 0:
+                    user_input = int(input('Enter any number not zero to add on to your equation: '))
+                    if user_input != 0:
+                        numbers.append(user_input)
+					else:
+					print('The answer is {}'.format(division(numbers))
         except ValueError as ex:
             print(ex)
 
@@ -53,8 +60,11 @@ def multiply(all_numbers):
         full_prob *= z
 
 
-def division():
-    pass
+def division(all_numbers):
+    full_prob = 0
+    for z in all_numbers:
+        full_prob /= z
+	return full_prob
 
 
 menu()
